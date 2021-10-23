@@ -10,12 +10,21 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (Input.GetKey("escape"))
+            {
+                Application.Quit();
+            }
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+         if (Input.GetKey("escape"))
+            {
+                Application.Quit();
+            }
+            
         this.transform.position = new Vector3(target.transform.position.x, this.transform.position.y, this.transform.position.z);
     }
+
 }
